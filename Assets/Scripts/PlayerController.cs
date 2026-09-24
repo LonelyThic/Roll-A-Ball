@@ -14,16 +14,16 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent <Rigidbody>();
     }
 
-    void FixedUpdate()
-    {
-        rb.AddForce(movement);
-        Vector3 movement = new Vector3 ( movementX, 2.0f, movementY);
-    }
-
     void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
         movementX = movementVector.x;
         movementY = movementVector.y;
+    }
+
+    void FixedUpdate()
+    {
+        rb.AddForce(movementVector);
+        Vector3 movement = new Vector3 ( movementX, 2.0f, movementY);
     }
 }
