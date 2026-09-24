@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
  private float movementY;
 
  // Speed at which the player moves.
- public float speed = 10; 
+ public float speed = 0; 
 
  // Start is called before the first frame update.
  void Start()
